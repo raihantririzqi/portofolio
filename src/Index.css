@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+  background-color: #0f0f0f; /* abu kehitaman elegan */
+  color: #e5e7eb; /* teks abu terang (Tailwind slate-200) */
+}
