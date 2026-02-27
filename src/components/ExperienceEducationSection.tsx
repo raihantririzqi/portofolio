@@ -70,7 +70,7 @@ export default function ExperienceEducationSection() {
     },
     {
       id: 3,
-      position: "Head of Technical Division (Pemiket)",
+      position: "Head of IT Division — PEMIKET 2025 Committee",
       company: "Institut Teknologi Sumatera",
       location: "Lampung Selatan, Indonesia",
       duration: "Dec 2025 - Jan 2026",
@@ -95,7 +95,7 @@ export default function ExperienceEducationSection() {
       description:
         "Focusing on Software Engineering, web development, and system architecture. Currently in semester 2.",
       achievements: [
-        "Head of Technical Division at campus organization (Pemiket 2025)",
+        "Head of IT Division at PEMIKET 2025 Committee (ITERA)",
         "Active in full-stack software development alongside studies",
       ],
     },
