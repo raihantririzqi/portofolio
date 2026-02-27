@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Copyright & Bottom Info */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Raihan Tri Rizqi Wibowo. Design by Yahya.
+            &copy; {currentYear} Raihan Tri Rizqi Wibowo. Design by Yahya Alifandi.
           </p>
           <p className="text-gray-500 text-sm">Crafted with ❤️ and ☕</p>
         </div>
