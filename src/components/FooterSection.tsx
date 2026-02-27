@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,10 +21,6 @@ export default function Footer() {
     },
   ];
 
-  const additionalLinks = [
-    { name: "Resume", url: "/cv.pdf", external: true },
-  ];
-
   return (
     <footer className=" bg-slate-950 border-t border-slate-800">
       {/* Background Elements */}
@@ -34,7 +30,7 @@ export default function Footer() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">
@@ -47,28 +43,6 @@ export default function Footer() {
               and Go. Building production-grade web applications from Lampung,
               Indonesia.
             </p>
-          </div>
-
-          {/* Additional Links */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {additionalLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.url}
-                    className={`text-gray-400 hover:text-violet-400 transition-colors text-sm flex items-center gap-1 ${
-                      link.external ? "inline-flex" : ""
-                    }`}
-                    target={link.external ? "_blank" : undefined}
-                    rel={link.external ? "noopener noreferrer" : undefined}
-                  >
-                    {link.name}
-                    {link.external && <ExternalLink className="h-3 w-3" />}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Social Links */}
