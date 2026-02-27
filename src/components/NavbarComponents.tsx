@@ -22,7 +22,7 @@ export default function NavbarComponents({ className = "" }) {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center group cursor-pointer">
             <Zap className="h-8 w-8 text-violet-400 mr-2 transition-all duration-300 group-hover:scale-110" />
-            <h1 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-violet-400">Raihan Tri Rizqi</h1>
+            <h1 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-violet-400">Raihan Tri Rizqi Wibowo</h1>
           </div>
 
           {/* Desktop Menu */}
