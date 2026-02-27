@@ -65,7 +65,7 @@ export default function ProjectSection() {
       description:
         "Online voting platform for ITERA student election (PEMIKET 2025), featuring candidate profiles, real-time voting, rundown, FAQ, and feedback system.",
       image: "/Screenshot 2026-02-27 at 08.55.55.png",
-      category: "fullstack",
+      category: "frontend",
       technologies: ["Next.js", "TypeScript"],
       githubUrl: "https://github.com/raihantririzqi",
       demoUrl: "#",
@@ -76,6 +76,7 @@ export default function ProjectSection() {
   const filters = [
     { id: "all", label: "All Projects" },
     { id: "fullstack", label: "Full Stack" },
+    { id: "frontend", label: "Frontend" },
   ];
 
   const filteredProjects =
