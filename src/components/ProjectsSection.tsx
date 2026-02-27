@@ -1,10 +1,9 @@
 import { useState } from "react";
 import {
   Briefcase,
-  ExternalLink,
-  Github,
   ArrowRight,
   Sparkles,
+  X,
 } from "lucide-react";
 
 interface Project {
@@ -21,6 +20,7 @@ interface Project {
 
 export default function ProjectSection() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
     {
@@ -55,6 +55,18 @@ export default function ProjectSection() {
       image: "/Screenshot 2026-02-27 at 10.44.03.png",
       category: "fullstack",
       technologies: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
+      githubUrl: "https://github.com/raihantririzqi",
+      demoUrl: "#",
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "Peduli Hati — PEMIKET Voting Platform",
+      description:
+        "Online voting platform for ITERA student election (PEMIKET 2025), featuring candidate profiles, real-time voting, rundown, FAQ, and feedback system.",
+      image: "/Screenshot 2026-02-27 at 08.55.55.png",
+      category: "fullstack",
+      technologies: ["Next.js", "TypeScript"],
       githubUrl: "https://github.com/raihantririzqi",
       demoUrl: "#",
       featured: true,
@@ -137,25 +149,6 @@ export default function ProjectSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
 
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-slate-900/90 backdrop-blur-sm rounded-xl border border-slate-700 hover:border-violet-500 transition-all hover:scale-110"
-                  >
-                    <Github className="h-5 w-5 text-white" />
-                  </a>
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-violet-600 rounded-xl hover:bg-violet-500 transition-all hover:scale-110"
-                  >
-                    <ExternalLink className="h-5 w-5 text-white" />
-                  </a>
-                </div>
               </div>
 
               {/* Project Info */}
@@ -184,16 +177,14 @@ export default function ProjectSection() {
                   ))}
                 </div>
 
-                {/* View Details Link */}
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* View Details Button */}
+                <button
+                  onClick={() => setSelectedProject(project)}
                   className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors text-sm font-medium"
                 >
-                  <span>View Project</span>
+                  <span>View Details</span>
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </button>
               </div>
             </div>
           ))}
@@ -219,6 +210,68 @@ export default function ProjectSection() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="relative bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl shadow-violet-500/20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="absolute top-4 right-4 z-10 p-2 bg-slate-800 hover:bg-slate-700 rounded-xl transition-colors"
+            >
+              <X className="h-5 w-5 text-gray-400" />
+            </button>
+
+            {/* Image */}
+            <div className="relative h-64 overflow-hidden rounded-t-2xl">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6">
+              <div className="inline-block px-3 py-1 bg-violet-600/20 text-violet-400 rounded-lg text-xs font-medium mb-3 capitalize">
+                {selectedProject.category}
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-3">
+                {selectedProject.title}
+              </h3>
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                {selectedProject.description}
+              </p>
+
+              {/* Technologies */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 text-sm uppercase tracking-wider">
+                  Technologies
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1.5 bg-slate-800 text-gray-300 rounded-lg text-sm border border-slate-700"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Animation Styles */}
       <style>{`
