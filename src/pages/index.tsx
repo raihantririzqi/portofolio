@@ -6,8 +6,6 @@ import HeroSection from "../components/heroSection";
 import NavbarComponents from "../components/NavbarComponents";
 import ProjectSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillSection";
-import TestimonialsSection from "../components/TestimonialsSection";
-
 // Dalam komponen Index.tsx
 export default function Index() {
   return (
@@ -31,7 +29,6 @@ export default function Index() {
           <ProjectSection />
           <ExperienceEducationSection />
           <SkillsSection />
-          <TestimonialsSection />
           <ContactSection />
         </div>
       </main>

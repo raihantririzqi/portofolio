@@ -40,66 +40,47 @@ export default function ExperienceEducationSection() {
   const experiences: Experience[] = [
     {
       id: 1,
-      position: "Senior Full Stack Developer",
-      company: "Tech Innovators Inc.",
-      location: "Jakarta, Indonesia",
-      duration: "Jan 2023 - Present",
+      position: "Full-stack Developer",
+      company: "PT. Tunas Link Indonesia",
+      location: "Bandar Lampung, Indonesia",
+      duration: "Jun 2025 - Present",
       type: "fulltime",
       description: [
-        "Led development of scalable web applications serving 100K+ users",
-        "Architected microservices infrastructure using Node.js and Docker",
-        "Mentored junior developers and conducted code reviews",
-        "Improved application performance by 40% through optimization",
+        "Architecting a comprehensive Batch Inventory System as a Full-stack Next.js application to manage warehouse stocks and logistics",
+        "Maintaining a production-grade ISP billing platform with automated invoicing and OLT hardware integration (ZTE & FiberHome) using Next.js and Go",
+        "Managing high-performance deployments using Docker and Nginx on Linux environments",
       ],
-      technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
+      technologies: ["Next.js", "Go", "Docker", "Nginx", "Linux"],
       current: true,
     },
     {
       id: 2,
-      position: "Frontend Developer",
-      company: "Digital Solutions Ltd.",
-      location: "Bandung, Indonesia",
-      duration: "Jun 2021 - Dec 2022",
-      type: "fulltime",
+      position: "Full-stack Developer",
+      company: "PT. Tunas Link Indonesia",
+      location: "Remote",
+      duration: "Oct 2024 - Jun 2025",
+      type: "freelance",
       description: [
-        "Developed responsive web applications using React and TypeScript",
-        "Collaborated with UX team to implement pixel-perfect designs",
-        "Integrated RESTful APIs and managed state with Redux",
-        "Reduced page load time by 50% through code splitting",
+        "Designed and built the core billing application for ISP services as a Full-stack Next.js application, focusing on automated client management and invoicing",
+        "Integrated secure payment gateways to automate collection processes and financial reporting",
+        "Maintained service stability and performance using PM2 and Nginx server configurations",
       ],
-      technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
+      technologies: ["Next.js", "Flutter", "PM2", "Nginx"],
       current: false,
     },
     {
       id: 3,
-      position: "UI/UX Designer & Frontend Developer",
-      company: "Freelance",
-      location: "Remote",
-      duration: "Jan 2020 - May 2021",
-      type: "freelance",
-      description: [
-        "Designed and developed websites for 15+ clients worldwide",
-        "Created user-centered designs using Figma and Adobe XD",
-        "Implemented responsive layouts with modern CSS frameworks",
-        "Maintained 5-star rating across all projects",
-      ],
-      technologies: ["Figma", "React", "Next.js", "Tailwind CSS"],
-      current: false,
-    },
-    {
-      id: 4,
-      position: "Web Development Intern",
-      company: "StartUp Hub",
-      location: "Yogyakarta, Indonesia",
-      duration: "Jul 2019 - Dec 2019",
+      position: "Head of Technical Division (Pemiket)",
+      company: "Institut Teknologi Sumatera",
+      location: "Lampung Selatan, Indonesia",
+      duration: "Dec 2025 - Jan 2026",
       type: "internship",
       description: [
-        "Assisted in developing company website and internal tools",
-        "Learned modern web development practices and agile methodology",
-        "Contributed to frontend components using React",
-        "Participated in daily standups and sprint planning",
+        "Ensured a secure digital environment and oversaw technical safety protocols for student platforms",
+        "Designed and implemented user-friendly interfaces using Next.js, prioritizing aesthetic and user comfort",
+        "Managed a team of technical analysts to ensure all departmental activities were conducted orderly and securely",
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "React"],
+      technologies: ["Next.js", "TypeScript"],
       current: false,
     },
   ];
@@ -107,56 +88,29 @@ export default function ExperienceEducationSection() {
   const education: Education[] = [
     {
       id: 1,
-      degree: "Bachelor of Computer Science",
-      institution: "University of Lampung",
+      degree: "Bachelor of Informatics Engineering",
+      institution: "Institut Teknologi Sumatera (ITERA)",
       location: "Bandar Lampung, Indonesia",
-      duration: "2018 - 2022",
-      gpa: "3.85 / 4.00",
+      duration: "2025 - Present · Semester 2",
       description:
-        "Focused on Software Engineering and Web Development. Graduated with honors.",
+        "Focusing on Software Engineering, web development, and system architecture. Currently in semester 2.",
       achievements: [
-        "Dean's List for 4 consecutive semesters",
-        "Best Capstone Project Award 2022",
-        "Published research paper on Web Performance Optimization",
+        "Head of Technical Division at campus organization (Pemiket 2025)",
+        "Active in full-stack software development alongside studies",
       ],
     },
     {
       id: 2,
-      degree: "AWS Certified Developer - Associate",
-      institution: "Amazon Web Services",
-      location: "Online",
-      duration: "2023",
+      degree: "Software Engineering (RPL)",
+      institution: "SMKN 2 Terbanggi Besar",
+      location: "Lampung Tengah, Indonesia",
+      duration: "Graduated 2025",
       description:
-        "Validated expertise in developing and maintaining AWS-based applications.",
+        "Software Engineering major focused on software development and programming. Competed in LKS field: IT Software Solution for Business.",
       achievements: [
-        "Passed with score of 920/1000",
-        "Specialized in serverless architecture",
-      ],
-    },
-    {
-      id: 3,
-      degree: "Google UX Design Professional Certificate",
-      institution: "Google (via Coursera)",
-      location: "Online",
-      duration: "2022",
-      description:
-        "Comprehensive program covering user research, wireframing, prototyping, and usability testing.",
-      achievements: [
-        "Completed 7-course series with distinction",
-        "Created portfolio of 3 end-to-end UX projects",
-      ],
-    },
-    {
-      id: 4,
-      degree: "Meta Front-End Developer Certificate",
-      institution: "Meta (via Coursera)",
-      location: "Online",
-      duration: "2021",
-      description:
-        "Advanced training in modern frontend development with React and responsive design.",
-      achievements: [
-        "Built capstone project with React and REST APIs",
-        "Mastered advanced React patterns and performance optimization",
+        "1st Place LKS IT Software Solution for Business – District Level",
+        "2nd Place LKS IT Software Solution for Business – Provincial Level",
+        "3rd Place LKS IT Software Solution for Business – Provincial Level",
       ],
     },
   ];
@@ -177,11 +131,11 @@ export default function ExperienceEducationSection() {
   const getTypeLabel = (type: string) => {
     switch (type) {
       case "fulltime":
-        return "Full Time";
+        return "Contract";
       case "freelance":
-        return "Freelance";
+        return "Part Time";
       case "internship":
-        return "Internship";
+        return "Volunteer";
       default:
         return type;
     }
@@ -418,20 +372,20 @@ export default function ExperienceEducationSection() {
         {/* Summary Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-slate-800">
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">5+</div>
+            <div className="text-4xl font-bold text-violet-400">1.5+</div>
             <div className="text-gray-400">Years Experience</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">4</div>
-            <div className="text-gray-400">Companies Worked</div>
+            <div className="text-4xl font-bold text-violet-400">1</div>
+            <div className="text-gray-400">Company</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">15+</div>
-            <div className="text-gray-400">Freelance Projects</div>
+            <div className="text-4xl font-bold text-violet-400">3+</div>
+            <div className="text-gray-400">Projects Shipped</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">4</div>
-            <div className="text-gray-400">Certifications</div>
+            <div className="text-4xl font-bold text-violet-400">1</div>
+            <div className="text-gray-400">Leadership Role</div>
           </div>
         </div>
       </div>

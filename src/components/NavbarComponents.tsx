@@ -16,9 +16,9 @@ export default function NavbarComponents({ className = "" }) {
   ];
 
   const services = [
-    { id: 'service1', label: 'Web Development', desc: 'Full-stack solutions', icon: Code },
-    { id: 'service2', label: 'Mobile Apps', desc: 'iOS & Android', icon: Smartphone },
-    { id: 'service3', label: 'UI/UX Design', desc: 'User-centered design', icon: Palette },
+    { id: 'service1', label: 'Web Development', desc: 'Next.js full-stack solutions', icon: Code },
+    { id: 'service2', label: 'App Development', desc: 'Mobile with Flutter', icon: Smartphone },
+    { id: 'service3', label: 'IT Consulting', desc: 'Architecture & infrastructure', icon: Palette },
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function NavbarComponents({ className = "" }) {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center group cursor-pointer">
             <Rocket className="h-8 w-8 text-violet-400 mr-2 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
-            <h1 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-violet-400">Yahya Alifandi</h1>
+            <h1 className="text-2xl font-bold text-white transition-all duration-300 group-hover:text-violet-400">Raihan Tri Rizqi</h1>
           </div>
 
           {/* Desktop Menu */}

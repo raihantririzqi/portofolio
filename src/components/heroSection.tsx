@@ -15,9 +15,9 @@ export default function HeroSection() {
   const [currentRole, setCurrentRole] = useState(0);
 
   const roles = [
-    "Full Stack Developer",
-    "UI/UX Designer",
-    "Creative Developer",
+    "Full-stack Developer",
+    "Next.js Specialist",
+    "Go Backend Developer",
   ];
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function HeroSection() {
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent">
-                  Yahya
+                  Raihan
                 </span>
               </h1>
 
@@ -79,9 +79,10 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-              I craft beautiful digital experiences with a focus on
-              user-centered design and clean code. Passionate about creating
-              innovative solutions that make a difference.
+              Undergraduate Informatics Engineering student at ITERA specializing in
+              building production-grade full-stack applications with Next.js and Go.
+              Currently architecting scalable ISP billing systems and warehouse
+              management solutions at PT. Tunas Link Indonesia.
             </p>
 
             {/* CTA Buttons */}
@@ -107,19 +108,23 @@ export default function HeroSection() {
             {/* Social Links */}
             <div className="flex items-center gap-4 pt-4">
               <a
-                href="#github"
+                href="https://github.com/raihantririzqi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-violet-500 transition-all duration-300 hover:scale-110"
               >
                 <Github className="h-5 w-5 text-gray-400 group-hover:text-violet-400 transition-colors" />
               </a>
               <a
-                href="#linkedin"
+                href="https://www.linkedin.com/in/raihan-tri-rizqi/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-violet-500 transition-all duration-300 hover:scale-110"
               >
                 <Linkedin className="h-5 w-5 text-gray-400 group-hover:text-violet-400 transition-colors" />
               </a>
               <a
-                href="#email"
+                href="mailto:raihantririzqi5@gmail.com"
                 className="group p-3 bg-slate-800 rounded-xl border border-slate-700 hover:border-violet-500 transition-all duration-300 hover:scale-110"
               >
                 <Mail className="h-5 w-5 text-gray-400 group-hover:text-violet-400 transition-colors" />
@@ -143,10 +148,10 @@ export default function HeroSection() {
                 </p>
                 <div className="mt-4 flex gap-2">
                   <span className="px-3 py-1 bg-violet-600/20 text-violet-400 rounded-full text-xs">
-                    React
+                    Next.js
                   </span>
                   <span className="px-3 py-1 bg-violet-600/20 text-violet-400 rounded-full text-xs">
-                    Node.js
+                    Go
                   </span>
                 </div>
               </div>
@@ -160,17 +165,17 @@ export default function HeroSection() {
                   <Palette className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">
-                  UI/UX Design
+                  Full-stack
                 </h3>
                 <p className="text-gray-400 text-sm">
-                  Creating beautiful user experiences
+                  End-to-end application development
                 </p>
                 <div className="mt-4 flex gap-2">
                   <span className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">
-                    Figma
+                    TypeScript
                   </span>
                   <span className="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-full text-xs">
-                    Adobe
+                    REST API
                   </span>
                 </div>
               </div>
@@ -205,20 +210,20 @@ export default function HeroSection() {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-slate-800">
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">50+</div>
-            <div className="text-gray-400">Projects Done</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">30+</div>
-            <div className="text-gray-400">Happy Clients</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">5+</div>
+            <div className="text-4xl font-bold text-violet-400">1.5+</div>
             <div className="text-gray-400">Years Exp</div>
           </div>
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">15+</div>
-            <div className="text-gray-400">Awards Won</div>
+            <div className="text-4xl font-bold text-violet-400">3+</div>
+            <div className="text-gray-400">Projects Live</div>
+          </div>
+          <div className="text-center space-y-2">
+            <div className="text-4xl font-bold text-violet-400">2</div>
+            <div className="text-gray-400">Tech Stacks</div>
+          </div>
+          <div className="text-center space-y-2">
+            <div className="text-4xl font-bold text-violet-400">1</div>
+            <div className="text-gray-400">Company</div>
           </div>
         </div>
       </div>

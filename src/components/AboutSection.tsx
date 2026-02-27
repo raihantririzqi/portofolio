@@ -14,22 +14,22 @@ import {
 } from "lucide-react";
 
 export default function AboutSection() {
-  const [activeTab, setActiveTab] = useState("bio");
+  const [activeTab, setActiveTab] = useState("tech");
 
   const skills = {
     technical: [
-      { name: "React", level: 95, color: "bg-violet-500" },
-      { name: "Next.js", level: 90, color: "bg-violet-500" },
-      { name: "TypeScript", level: 88, color: "bg-violet-500" },
-      { name: "Tailwind CSS", level: 95, color: "bg-violet-500" },
-      { name: "Node.js", level: 85, color: "bg-purple-500" },
-      { name: "PostgreSQL", level: 80, color: "bg-purple-500" },
+      { name: "Next.js / React", level: 95, color: "bg-violet-500" },
+      { name: "Go (Golang)", level: 88, color: "bg-violet-500" },
+      { name: "TypeScript", level: 90, color: "bg-violet-500" },
+      { name: "Tailwind CSS", level: 92, color: "bg-violet-500" },
+      { name: "Flutter", level: 78, color: "bg-purple-500" },
+      { name: "MySQL", level: 82, color: "bg-purple-500" },
     ],
     design: [
-      { name: "Figma", level: 92, color: "bg-pink-500" },
-      { name: "Adobe XD", level: 85, color: "bg-pink-500" },
-      { name: "UI/UX Design", level: 90, color: "bg-pink-500" },
-      { name: "Prototyping", level: 88, color: "bg-pink-500" },
+      { name: "Docker", level: 85, color: "bg-pink-500" },
+      { name: "Nginx", level: 82, color: "bg-pink-500" },
+      { name: "Linux", level: 85, color: "bg-pink-500" },
+      { name: "PM2", level: 80, color: "bg-pink-500" },
     ],
     soft: [
       { name: "Problem Solving", icon: Lightbulb },
@@ -42,7 +42,6 @@ export default function AboutSection() {
   const languages = [
     { name: "Indonesian", level: "Native", flag: "🇮🇩" },
     { name: "English", level: "Professional", flag: "🇺🇸" },
-    { name: "Japanese", level: "Intermediate", flag: "🇯🇵" },
   ];
 
   const values = [
@@ -109,16 +108,16 @@ export default function AboutSection() {
                 <h3 className="text-2xl font-bold text-white">Background</h3>
               </div>
               <p className="text-gray-400 leading-relaxed mb-4">
-                Hi! I'm Yahya, a full-stack developer and UI/UX designer based
-                in Indonesia. I've been passionate about creating digital
-                experiences for over 5 years, combining technical expertise with
-                creative design thinking.
+                Hi! I'm Raihan, an Informatics Engineering undergraduate at
+                Institut Teknologi Sumatera (ITERA) and a Full-stack Software
+                Engineer & Architect specializing in Next.js and Go. Based in
+                Bandar Lampung, Indonesia.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                My journey started with a curiosity for how things work on the
-                web, which led me to dive deep into both frontend and backend
-                development. I love transforming complex problems into simple,
-                beautiful, and intuitive solutions.
+                I build production-grade web applications — from ISP billing
+                platforms with automated invoicing to warehouse management
+                systems. I also handle infrastructure using Docker and Nginx on
+                Linux environments.
               </p>
             </div>
 
@@ -133,29 +132,34 @@ export default function AboutSection() {
               <div className="space-y-4">
                 <div className="pb-4 border-b border-slate-700">
                   <h4 className="text-white font-semibold mb-1">
-                    Bachelor of Computer Science
+                    Bachelor of Informatics Engineering
                   </h4>
                   <p className="text-violet-400 text-sm mb-2">
-                    University of Lampung
+                    Institut Teknologi Sumatera (ITERA)
                   </p>
-                  <p className="text-gray-500 text-sm">2018 - 2022</p>
+                  <p className="text-gray-500 text-sm">2025 - Present · Semester 2</p>
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">
-                    Certifications
+                    Software Engineering (RPL)
                   </h4>
-                  <ul className="space-y-2 mt-3">
+                  <p className="text-violet-400 text-sm mb-2">
+                    SMKN 2 Terbanggi Besar
+                  </p>
+                  <p className="text-gray-500 text-sm mb-3">Graduated 2025</p>
+                  <p className="text-gray-500 text-xs mb-2 italic">IT Software Solution for Business</p>
+                  <ul className="space-y-1">
                     <li className="flex items-center gap-2 text-gray-400 text-sm">
-                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full"></div>
-                      AWS Certified Developer
+                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full flex-shrink-0"></div>
+                      1st Place LKS – District Level
                     </li>
                     <li className="flex items-center gap-2 text-gray-400 text-sm">
-                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full"></div>
-                      Google UX Design Certificate
+                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full flex-shrink-0"></div>
+                      2nd Place LKS – Provincial Level
                     </li>
                     <li className="flex items-center gap-2 text-gray-400 text-sm">
-                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full"></div>
-                      Meta Front-End Developer
+                      <div className="w-1.5 h-1.5 bg-violet-400 rounded-full flex-shrink-0"></div>
+                      3rd Place LKS – Provincial Level
                     </li>
                   </ul>
                 </div>
@@ -224,7 +228,7 @@ export default function AboutSection() {
                       : "text-gray-400 hover:text-white"
                   }`}
                 >
-                  Design
+                  DevOps
                 </button>
               </div>
 

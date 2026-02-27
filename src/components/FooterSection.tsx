@@ -6,25 +6,23 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "GitHub",
-      url: "#github",
+      url: "https://github.com/raihantririzqi",
       icon: <Github className="h-5 w-5" />,
     },
     {
       name: "LinkedIn",
-      url: "#linkedin",
+      url: "https://www.linkedin.com/in/raihan-tri-rizqi/",
       icon: <Linkedin className="h-5 w-5" />,
     },
     {
       name: "Email",
-      url: "mailto:yahya@example.com",
+      url: "mailto:raihantririzqi5@gmail.com",
       icon: <Mail className="h-5 w-5" />,
     },
   ];
 
   const additionalLinks = [
-    { name: "Privacy Policy", url: "#privacy" },
-    { name: "Terms of Service", url: "#terms" },
-    { name: "Resume", url: "#resume", external: true },
+    { name: "Resume", url: "/cv.pdf", external: true },
   ];
 
   return (
@@ -41,12 +39,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">
               <span className="bg-gradient-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent">
-                Yahya
+                Raihan
               </span>
             </h3>
             <p className="text-gray-400 text-sm max-w-xs">
-              Full-stack developer & UI/UX designer crafting digital experiences
-              with passion and precision.
+              Full-stack Software Engineer & Architect specializing in Next.js
+              and Go. Building production-grade web applications from Lampung,
+              Indonesia.
             </p>
           </div>
 
@@ -96,7 +95,7 @@ export default function Footer() {
         {/* Copyright & Bottom Info */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            &copy; {currentYear} Yahya. All rights reserved.
+            &copy; {currentYear} Raihan Tri Rizqi Wibowo. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">Crafted with ❤️ and ☕</p>
         </div>

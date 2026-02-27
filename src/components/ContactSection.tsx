@@ -39,27 +39,26 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "yahya@example.com",
-      href: "mailto:yahya@example.com",
+      value: "raihantririzqi5@gmail.com",
+      href: "mailto:raihantririzqi5@gmail.com",
     },
     {
       icon: Phone,
-      label: "Phone",
-      value: "+62 812-3456-7890",
-      href: "tel:+6281234567890",
+      label: "LinkedIn",
+      value: "linkedin.com/in/raihan-tri-rizqi",
+      href: "https://www.linkedin.com/in/raihan-tri-rizqi/",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Lampung, Indonesia",
+      value: "Bandar Lampung, Lampung, Indonesia",
       href: "#",
     },
   ];
 
   const socialLinks = [
-    { name: "GitHub", url: "#github", icon: "🐙" },
-    { name: "LinkedIn", url: "#linkedin", icon: "👔" },
-    { name: "Twitter", url: "#twitter", icon: "🐦" },
+    { name: "GitHub", url: "https://github.com/raihantririzqi", icon: "🐙" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/raihan-tri-rizqi/", icon: "👔" },
   ];
 
   return (

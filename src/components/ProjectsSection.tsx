@@ -4,7 +4,6 @@ import {
   ExternalLink,
   Github,
   ArrowRight,
-  Code2,
   Sparkles,
 } from "lucide-react";
 
@@ -26,83 +25,45 @@ export default function ProjectSection() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "ISP Billing System",
       description:
-        "A full-stack e-commerce platform with real-time inventory management, payment integration, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+        "Production-grade ISP billing platform with automated invoicing, customer management, and OLT hardware integration (ZTE & FiberHome). Deployed with Docker and Nginx on Linux.",
+      image: "/Screenshot 2026-02-27 at 10.35.20.png",
       category: "fullstack",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubUrl: "https://github.com/username/ecommerce",
-      demoUrl: "https://demo.ecommerce.com",
+      technologies: ["Next.js", "Go", "MySQL", "Docker", "Nginx", "OLT"],
+      githubUrl: "https://github.com/raihantririzqi",
+      demoUrl: "#",
       featured: true,
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "Tinknet Inventory",
       description:
-        "Collaborative task management application with drag-and-drop functionality, real-time updates, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
-      category: "frontend",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
-      githubUrl: "https://github.com/username/taskapp",
-      demoUrl: "https://demo.taskapp.com",
+        "Comprehensive batch inventory system for warehouse management, featuring asset valuation, stock tracking, batch verification, and low-stock alerts.",
+      image: "/Screenshot 2026-02-27 at 10.43.02.png",
+      category: "fullstack",
+      technologies: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
+      githubUrl: "https://github.com/raihantririzqi",
+      demoUrl: "#",
       featured: true,
     },
     {
       id: 3,
-      title: "AI Chat Assistant",
+      title: "Termin — Contract Management",
       description:
-        "An intelligent chatbot powered by AI that helps users with customer support, featuring natural language processing.",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop",
+        "Financial contract tracking system with payment schedule management, overdue detection, and cash flow reporting for B2B billing cycles.",
+      image: "/Screenshot 2026-02-27 at 10.44.03.png",
       category: "fullstack",
-      technologies: ["Next.js", "OpenAI", "PostgreSQL", "Prisma"],
-      githubUrl: "https://github.com/username/ai-chat",
-      demoUrl: "https://demo.aichat.com",
+      technologies: ["Next.js", "TypeScript", "MySQL", "Tailwind CSS"],
+      githubUrl: "https://github.com/raihantririzqi",
+      demoUrl: "#",
       featured: true,
-    },
-    {
-      id: 4,
-      title: "Social Media Dashboard",
-      description:
-        "Analytics dashboard for social media management with data visualization, post scheduling, and engagement tracking.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      category: "design",
-      technologies: ["Figma", "React", "Chart.js", "Redux"],
-      githubUrl: "https://github.com/username/dashboard",
-      demoUrl: "https://demo.dashboard.com",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "Fitness Tracking App",
-      description:
-        "Mobile-first fitness application with workout plans, progress tracking, and nutrition guides.",
-      image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&h=600&fit=crop",
-      category: "frontend",
-      technologies: ["React Native", "Redux", "Firebase", "Tailwind"],
-      githubUrl: "https://github.com/username/fitness",
-      demoUrl: "https://demo.fitness.com",
-      featured: false,
-    },
-    {
-      id: 6,
-      title: "Weather Forecast App",
-      description:
-        "Real-time weather application with location-based forecasts, weather alerts, and interactive maps.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop",
-      category: "frontend",
-      technologies: ["Vue.js", "Weather API", "Leaflet", "CSS3"],
-      githubUrl: "https://github.com/username/weather",
-      demoUrl: "https://demo.weather.com",
-      featured: false,
     },
   ];
 
   const filters = [
     { id: "all", label: "All Projects" },
     { id: "fullstack", label: "Full Stack" },
-    { id: "frontend", label: "Frontend" },
-    { id: "design", label: "UI/UX Design" },
   ];
 
   const filteredProjects =
@@ -137,11 +98,10 @@ export default function ProjectSection() {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                activeFilter === filter.id
+              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${activeFilter === filter.id
                   ? "bg-violet-600 text-white shadow-lg shadow-violet-500/50"
                   : "bg-slate-800/50 text-gray-400 hover:text-white hover:bg-slate-800 border border-slate-700"
-              }`}
+                }`}
             >
               {filter.label}
             </button>
@@ -239,37 +199,23 @@ export default function ProjectSection() {
           ))}
         </div>
 
-        {/* View More Button */}
-        <div className="text-center mt-12">
-          <a
-            href="#all-projects"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-xl font-semibold hover:from-violet-500 hover:to-purple-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50"
-          >
-            <Code2 className="h-5 w-5" />
-            <span>View All Projects</span>
-            <ArrowRight className="h-5 w-5" />
-          </a>
-        </div>
-
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-12 border-t border-slate-800">
           <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">
-              {projects.length}+
-            </div>
-            <div className="text-gray-400">Projects Completed</div>
+            <div className="text-4xl font-bold text-violet-400">3+</div>
+            <div className="text-gray-400">Projects Shipped</div>
+          </div>
+          <div className="text-center space-y-2">
+            <div className="text-4xl font-bold text-violet-400">1</div>
+            <div className="text-gray-400">Production Client</div>
+          </div>
+          <div className="text-center space-y-2">
+            <div className="text-4xl font-bold text-violet-400">1.5+</div>
+            <div className="text-gray-400">Years Experience</div>
           </div>
           <div className="text-center space-y-2">
             <div className="text-4xl font-bold text-violet-400">100%</div>
             <div className="text-gray-400">Client Satisfaction</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">50K+</div>
-            <div className="text-gray-400">Lines of Code</div>
-          </div>
-          <div className="text-center space-y-2">
-            <div className="text-4xl font-bold text-violet-400">24/7</div>
-            <div className="text-gray-400">Support Available</div>
           </div>
         </div>
       </div>
