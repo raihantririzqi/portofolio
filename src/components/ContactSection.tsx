@@ -1,7 +1,13 @@
 import { Mail, Phone, MapPin, Send, User, AtSign, MessageSquare } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+const SERVICE_ID = "service_kc5u779";
+const TEMPLATE_ID = "template_k2pwq5j";
+const PUBLIC_KEY = "IVSES6BXBxVWEvYZ9";
 
 export default function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,6 +16,7 @@ export default function ContactSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,18 +28,25 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formRef.current) return;
+
     setIsSubmitting(true);
     setSubmitMessage("");
+    setIsError(false);
 
-    // Simulasi pengiriman form
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitMessage("Thank you! Your message has been sent successfully.");
-      setFormData({ name: "", email: "", message: "" });
-
-      // Hapus pesan setelah beberapa detik
-      setTimeout(() => setSubmitMessage(""), 5000);
-    }, 1500);
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => {
+        setIsSubmitting(false);
+        setSubmitMessage("Thank you! Your message has been sent successfully.");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitMessage(""), 5000);
+      })
+      .catch(() => {
+        setIsSubmitting(false);
+        setIsError(true);
+        setSubmitMessage("Failed to send message. Please try again or contact me directly.");
+        setTimeout(() => setSubmitMessage(""), 5000);
+      });
   };
 
   const contactMethods = [
@@ -206,7 +220,11 @@ export default function ContactSection() {
                   )}
                 </button>
                 {submitMessage && (
-                  <div className="mt-4 p-4 bg-green-600/20 border border-green-500/30 rounded-xl text-green-400 text-center">
+                  <div className={`mt-4 p-4 rounded-xl text-center ${
+                    isError
+                      ? "bg-red-600/20 border border-red-500/30 text-red-400"
+                      : "bg-green-600/20 border border-green-500/30 text-green-400"
+                  }`}>
                     {submitMessage}
                   </div>
                 )}
